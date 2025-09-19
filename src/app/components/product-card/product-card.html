@@ -1,1 +1,20 @@
-<p>product-card works!</p>
+<div class="card h-100 shadow-sm">
+    <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text h4 text-primary">{{ product.price | currency:'USD' }}</p>
+
+        @if (product.stock < 5) { <div class="mt-auto">
+            <span class="badge"
+                [ngClass]="{'bg-warning text-dark': product.stock > 0, 'bg-danger': product.stock === 0}">
+                {{ product.stock > 0 ? 'Low Stock: ' + product.stock + ' left' : 'Out of Stock' }}
+            </span>
+    </div>
+    }
+</div>
+<div class="card-footer bg-white border-0">
+    <button class="btn btn-primary w-100" (click)="onAddToCart()" [disabled]="product.stock === 0">
+        Add to Cart
+    </button>
+</div>
+</div>
