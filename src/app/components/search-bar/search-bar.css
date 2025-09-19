@@ -1,0 +1,54 @@
+.search-bar-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+}
+
+.form-control-lg {
+  flex: 1 1 auto;
+  min-width: 250px;
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
+}
+
+.form-select {
+  width: 180px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.btn-outline-primary {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-list .list-group-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.autocomplete-list .list-group-item:hover {
+  background-color: #f8f9fa;
+}
