@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.search-container {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    max-width: 700px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+/* The main wrapper that creates the single-component look.
+  It uses flexbox for alignment and has transitions for a smooth focus effect.
+*/
+.unified-search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Add a focus effect to the entire bar when the input is focused */
+.unified-search-bar:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Custom styling for the main search input.
+  It's set to grow to fill available space and has no border or outline itself.
+*/
+.form-control-custom {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    padding: 0.875rem 1.25rem;
+    min-width: 200px;
+    color: #1f2937;
+    background-color: transparent;
+}
+
+.form-control-custom::placeholder {
+    color: #9ca3af;
+}
+
+/* Custom styling for the search button.
+  It has a transparent background and a subtle hover effect.
+*/
+.btn-search-custom {
+    border: none;
+    background-color: transparent;
+    padding: 0.75rem 1.25rem;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-search-custom:hover {
+    background-color: #f3f4f6;
+}

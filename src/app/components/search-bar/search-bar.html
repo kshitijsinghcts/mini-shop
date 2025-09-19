@@ -1,4 +1,19 @@
-<div class="mb-4">
-    <input type="text" class="form-control form-control-lg" placeholder="Search for products..."
-        aria-label="Search for products" [(ngModel)]="query" (ngModelChange)="onQueryChange()" />
+<div class="search-container">
+    <!-- A custom wrapper styled to look like a single input field -->
+    <div class="unified-search-bar">
+
+        <!-- Search Input -->
+        <input type="text" class="form-control-custom" placeholder="Search for products..."
+            aria-label="Search for products" [(ngModel)]="query" (ngModelChange)="onQueryChange()"
+            (keyup.enter)="onQueryChange()" autocomplete="off" />
+
+        <!-- Search Button -->
+        <button class="btn-search-custom" type="button" (click)="onQueryChange()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
 </div>
