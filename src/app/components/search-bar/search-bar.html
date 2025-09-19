@@ -1,0 +1,29 @@
+<div class="search-bar-container mb-4">
+  <div class="input-group position-relative">
+    <!-- Search Input -->
+    <input type="text" class="form-control form-control-lg" placeholder="Search for products..."
+      aria-label="Search for products" [(ngModel)]="query" (ngModelChange)="onQueryChange()" autocomplete="off" />
+
+    <!-- Autocomplete Suggestions -->
+    <ul class="list-group position-absolute w-100 autocomplete-list" *ngIf="filteredSuggestions.length > 0">
+      <li class="list-group-item list-group-item-action" *ngFor="let suggestion of filteredSuggestions"
+        (click)="selectSuggestion(suggestion)">
+        {{ suggestion }}
+      </li>
+    </ul>
+
+    <!-- Category Dropdown -->
+    <select class="form-select ms-2" [(ngModel)]="category" (change)="onCategoryChange()"
+      aria-label="Filter by category">
+      <option value="all">All</option>
+      <option value="electronics">Electronics</option>
+      <option value="accessories">Accessories</option>
+      <option value="appliances">Appliances</option>
+    </select>
+
+    <!-- Search Button -->
+    <button class="btn btn-outline-primary ms-2" type="button" (click)="onQueryChange()">
+      🔍
+    </button>
+  </div>
+</div>
