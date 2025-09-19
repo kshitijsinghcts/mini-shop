@@ -20,19 +20,13 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private cartService: CartService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(products => {
       this.allProducts = products;
       this.filteredProducts = products;
     });
-  }
-
-  onSearch(query: string): void {
-    this.filteredProducts = this.allProducts.filter(p =>
-      p.name.toLowerCase().includes(query.toLowerCase())
-    );
   }
 
   onAdd(product: Product): void {

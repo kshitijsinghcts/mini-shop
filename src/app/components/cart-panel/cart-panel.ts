@@ -12,11 +12,11 @@ import { CartItem } from '../../models/product.model';
   styleUrls: ['./cart-panel.css']
 })
 export class CartPanelComponent {
-  // 1. Declare the property without initializing it here.
+  // 1. Declare the property without initializing it here
   cartItems$: Observable<CartItem[]>;
 
   constructor(private cartService: CartService) {
-    // 2. Initialize the property inside the constructor.
+    // 2. Initialize the property inside the constructor
     this.cartItems$ = this.cartService.items$;
   }
 
