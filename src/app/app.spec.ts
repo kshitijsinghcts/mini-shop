@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
-
+// Test suite for the main application component
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({

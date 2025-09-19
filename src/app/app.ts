@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CartService } from './services/cart';
 import { ProductListComponent } from './components/product-list/product-list';
 import { CartPanelComponent } from './components/cart-panel/cart-panel';
-
+// The main application component
 @Component({
   selector: 'app-root',
   standalone: true,
